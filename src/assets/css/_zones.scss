@@ -1,0 +1,42 @@
+.zones {
+    display: grid;
+    max-width: 2000px;
+    margin-inline: auto;
+}
+
+
+.zones__zone {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+}
+
+.zones__zone:nth-child(1) {
+    padding-inline: 4rem;
+    padding-block-end: 4rem;
+}
+
+
+.zones__zone:nth-child(2) {
+    border-block-start: 2px solid;
+}
+
+
+@container root (min-width: 800px) {
+    .zones {
+        grid-template-columns: auto min(500px, 30vw);
+    }
+
+    .zones__zone {
+        overflow: auto;
+        height: 100dvh;
+    }
+
+    .zones__zone:nth-child(2) {
+        border-block-start: none;
+        border-inline-start: 2px solid;
+        height: 100dvh;
+        overflow: auto;
+        position: sticky;
+        top: 0;
+    }
+}

@@ -1,0 +1,42 @@
+.header {}
+
+.header__logo {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.header__intro {
+    font-size: 1.125rem;
+    max-width: 60ch;
+    margin-top: 1em;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.theme-toggle {
+    font-size: 1rem;
+    display: inline-flex;
+    gap: .5rem;
+    padding: .5em 1em;
+    border-radius: 99em;
+    border: 0;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: #EEE;
+}
+
+[data-theme="light"] .theme-toggle__icon--light {
+    display: none;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

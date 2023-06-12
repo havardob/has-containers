@@ -1,0 +1,86 @@
+/* Defaults */
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font: inherit;
+}
+
+html,
+body {
+    scrollbar-gutter: both-edges;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*:not(:is(ul, ol, li)) {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+select,
+input,
+textarea {
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+a {
+    color: inherit;
+}
+
+a:not([class]) {
+    text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+summary {
+    cursor: pointer;
+}
+
+body {
+    min-height: 100dvh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+:focus-visible {
+    --outline-size: max(2px, 0.15em);
+
+    outline: var(--outline-width, var(--outline-size)) solid var(--outline-color, currentColor);
+    outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:visited {
+    color: var(--visited-color, currentColor);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* End of reset */

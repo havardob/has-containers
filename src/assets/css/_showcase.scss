@@ -1,0 +1,17 @@
+.showcase {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-block-start: 4rem;
+    padding-block-end: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.showcase__item {
+    max-width: 800px;
+    &:nth-child(even) {
+        margin-inline-start: 3rem;
+    }
+}  

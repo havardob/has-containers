@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+    &__credits {
+        margin-block-start: auto;
+        font-size: .875rem;
+        color: #5d5d5d;
+    }
+}

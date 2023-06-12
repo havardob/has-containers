@@ -1,0 +1,37 @@
+.accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion {
+    &__toggle {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        font-weight: 500;
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        .icon {
+            flex-shrink: 0;
+        }
+
+        [open] & {
+            .icon {
+                rotate: 90deg;
+            }
+        }
+    }
+
+    &__content {
+        padding-block: 1rem;
+        padding-inline-start: 1.5rem;
+        border-inline-start: 1px solid #eee;
+        margin-inline-start: .75rem;  
+        margin-block-start: .5rem;
+    }
+
+}
