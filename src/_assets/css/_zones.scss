@@ -1,8 +1,8 @@
 .zones {
-    display: grid;
+    max-width: 2000px;
     margin-inline: auto;
-
     @container root (min-width: 1000px) {
+        display: grid;
         grid-template-columns: auto min(500px, 30vw);
     }
 

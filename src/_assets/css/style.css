@@ -125,7 +125,6 @@ html[data-theme=dark] {
 }
 
 body {
-  overflow: hidden;
   container-type: inline-size;
   container-name: root;
   background-color: var(--color-bg-primary);
@@ -147,11 +146,12 @@ body {
 }
 
 .zones {
-  display: grid;
+  max-width: 2000px;
   margin-inline: auto;
 }
 @container root (min-width: 1000px) {
   .zones {
+    display: grid;
     grid-template-columns: auto min(500px, 30vw);
   }
 }
@@ -260,8 +260,8 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  -webkit-margin-before: 4rem;
-          margin-block-start: 4rem;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
   -webkit-padding-after: 6rem;
           padding-block-end: 6rem;
   display: flex;
