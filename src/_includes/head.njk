@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="{{ siteSettings.metaDescription }}">
-    <meta property="og:image" content="/_assets/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>{{ siteSettings.metaTitle }}</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://has-containers.vercel.app/"/>
+    <meta property="og:title" content="{{ siteSettings.metaTitle }}"/>
+    <meta property="og:description" content="{{ siteSettings.metaDescription }}"/>
+    <meta property="og:image" content="{{ siteSettings.siteUrl }}/_assets/images/og-image.jpg">        
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="{{ siteSettings.siteUrl }}"/>
+    <meta property="twitter:title" content="{{ siteSettings.metaTitle }}"/>
+    <meta property="twitter:description" content="{{ siteSettings.metaDescription }}"/>
+    <meta property="twitter:image" content="{{ siteSettings.siteUrl }}/_assets/images/og-image.jpg"/>
+    <!-- -->
     <link rel="stylesheet" href="_assets/css/style.css"/>
     <link rel="shortcut icon" type="image/svg" href="_assets/images/favicon.svg"/>
-    <title>{{ siteSettings.metaTitle }}</title>
   </head>
   <body></body>
 </html>
