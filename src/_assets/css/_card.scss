@@ -9,16 +9,16 @@
     margin-inline: auto;
 }
 
-body:has(.card__link:hover) .card:not(:has(.card__link:hover)) {
+.showcase:has(.card__link:hover) .card:not(:has(.card__link:hover)) {
     opacity: .25;
 }
 
-// .card:has(.card__link:hover) .card__note {
-//     @container zone (min-width: 1000px) {
-//         rotate: -1.25deg;
-//         translate: .5rem;
-//     }
-// }
+.card:has(.card__link:hover) .card__note {
+    @container zone (min-width: 1000px) {
+        rotate: -1.25deg;
+        translate: .5rem;
+    }
+}
 
 
 .card__image {
@@ -52,22 +52,25 @@ body:has(.card__link:hover) .card:not(:has(.card__link:hover)) {
     width: 105%;
     margin-inline-start: -2.5%;
     margin-block-end: -2rem;
-
+    
     @container zone (min-width: 1000px) {
         position: absolute;
         inset-block-end: -2rem;
         inset-inline-start: -2rem;
         max-width: 600px;
     }
-
+    
     &-header {
         padding: .75rem;
         font-size: clamp(.75rem, 4vw, .875rem);
         border-block-end: 2px solid var(--color-border-primary);
         text-transform: uppercase;
         font-weight: 500;
+        position: relative;
+        display: flex;
+        align-items: center;
     }
-
+    
     &-content {
         padding: 1rem .75rem;
     }
@@ -77,6 +80,25 @@ body:has(.card__link:hover) .card:not(:has(.card__link:hover)) {
     border-bottom: 2px solid var(--color-border-primary);
     padding-inline: .75rem;
     padding-block: .75rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.browser-dots {
+    position: absolute;
+    right: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+
+    span {
+        width: .75rem;
+        height: .75rem;
+        display: block;
+        border-radius: 50%;
+        border: 2px solid var(--color-border-primary);
+    }
 }
 
 .card__title {
@@ -97,7 +119,7 @@ body:has(.card__link:hover) .card:not(:has(.card__link:hover)) {
     border-radius: 6px;
     transition: .15s ease;
     position: absolute;
-    inset-block-start: -2rem;
+    inset-block-start: 4rem;
     inset-inline-end: -1rem;
 
     .icon {

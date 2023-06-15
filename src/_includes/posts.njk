@@ -9,21 +9,30 @@
                         <h2 class="card__title">
                             {{ item.data.link }}
                         </h2>
+                        <div class="browser-dots">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </header>
                     <div class="card__content">
                         <div class="card__image">
-                            <img src="{{ item.data.screenshot }}"/>
+                            <img src="_static/{{ item.data.screenshotFileName }}" alt=""/>
                         </div>
                         <div class="card__note">
                             <div class="card__note-header">
-                                Note from contributor
+                                <span>Note from contributor</span>
+                                <div class="browser-dots">
+                                    <span></span>
+                                </div>
                             </div>
-                            <p class="card__note-content">
+                            <blockquote class="card__note-content">
+                                <p>
                                 "{{ item.data.description }}" <br/>
                                 {% if item.data.submittedBy %}
-                                    Submitted by {{ item.data.submittedBy }}
+                                    — {{ item.data.submittedBy }}
                                 {% endif %}
-                            </p>
+                                </p>
+                            </blockquote>
                         </div>
                     </div>
                     <footer class="card__footer">
@@ -36,4 +45,7 @@
             </li>
         {% endfor %}
     </ul>
+    <p class="showcase__suffix">End of the list.
+        <a href="https://github.com/havardob/has-containers/tree/main/src/posts">Want to contribute?</a>
+    </p>
 {% endif %}
