@@ -1,0 +1,47 @@
+.zones {
+    display: grid;
+    margin-inline: auto;
+
+    @container root (min-width: 1000px) {
+        grid-template-columns: auto min(500px, 30vw);
+    }
+
+    &__zone {
+        padding-inline: 1rem;
+        padding-block: 2rem;
+        container-name: zone;
+        container-type: inline-size;
+        scrollbar-gutter: stable;
+
+        @container root (min-width: 1000px) {
+            overflow: auto;
+            height: 100dvh;
+            padding-inline: 2rem;
+            padding-block: 2rem;
+        }
+
+        &:nth-child(1) {
+            padding-inline: 1rem;
+            padding-block-end: 1rem;
+
+            @container root (min-width: 1000px) {
+                padding-inline: 4rem;
+                padding-block-end: 2rem;
+            }
+        }
+
+
+        &:nth-child(2) {
+            border-block-start: 2px solid var(--color-border-primary);
+            @container root (min-width: 1000px) {
+                border-block-start: none;
+                border-inline-start: 2px solid var(--color-border-primary);
+                height: 100dvh;
+                overflow: auto;
+                position: sticky;
+                top: 0;
+                padding-inline: 1rem;
+            }
+        }
+    }
+}

@@ -1,12 +1,13 @@
 .header {}
 
 .header__logo {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 500;
+    line-height: 1.25;
 }
 
 .header__intro {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 4vw, 1.125rem);
     max-width: 60ch;
     margin-top: 1em;
 }
@@ -19,17 +20,19 @@
 }
 
 .theme-toggle {
-    font-size: 1rem;
+    font-size: clamp(.875rem, 4vw, 1rem);
     display: inline-flex;
     gap: .5rem;
     padding: .5em 1em;
     border-radius: 99em;
     border: 0;
     cursor: pointer;
-}
+    color: inherit;
+    background-color: var(--color-bg-primary); 
 
-.theme-toggle:hover {
-    background-color: #EEE;
+    &:hover {
+        background-color: var(--color-bg-secondary);
+    }
 }
 
 [data-theme="light"] .theme-toggle__icon--light {

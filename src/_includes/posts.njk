@@ -1,0 +1,39 @@
+{% if collections.post %}
+    <h2 class="u-hidden" id="listTitle">List of websites</h2>
+    <a href="#footer" class="u-skip-link">Skip list</a>
+    <ul class="showcase" aria-labelledby="listTitle">
+        {% for item in collections.post %}
+            <li class="showcase__item">
+                <article class="card">
+                    <header class="card__header">
+                        <h2 class="card__title">
+                            {{ item.data.link }}
+                        </h2>
+                    </header>
+                    <div class="card__content">
+                        <div class="card__image">
+                            <img src="{{ item.data.screenshot }}"/>
+                        </div>
+                        <div class="card__note">
+                            <div class="card__note-header">
+                                Note from contributor
+                            </div>
+                            <p class="card__note-content">
+                                "{{ item.data.description }}" <br/>
+                                {% if item.data.submittedBy %}
+                                    Submitted by {{ item.data.submittedBy }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="card__footer">
+                        <a href="{{ item.data.link }}" class="card__link">
+                            <span>Visit site</span>
+                            {% include 'icons/arrow-upward.njk' %}
+                        </a>
+                    </footer>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

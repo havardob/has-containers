@@ -6,12 +6,14 @@
     padding-block-end: 6rem;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 8rem;
 }
 
 .showcase__item {
-    max-width: 800px;
+    max-width: 1000px;
     &:nth-child(even) {
-        margin-inline-start: 3rem;
+        @container root (min-width: 1000px) {
+            margin-inline-start: 3rem;
+        }
     }
 }  

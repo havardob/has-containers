@@ -2,12 +2,15 @@
     & > * + * {
         margin-top: 1em;
     }
+
+    ol, ul {
+        padding-inline-start: 1.25rem;
+    }
 }
 
 
 code {
-    font-family: monospace;
-    background-color: #eee;
+    background-color: var(--color-bg-secondary);
     border-radius: 4px;
     padding: .125em .25em;
     display: inline-block;

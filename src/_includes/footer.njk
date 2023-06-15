@@ -1,0 +1,18 @@
+<footer class="footer" id="footer">
+    <div class="accordions">
+        {% for accordion in collections.accordions %}
+            <details class="accordion">
+                <summary class="accordion__toggle">
+                    {% include 'icons/arrow-right.njk' %}
+                    <span>{{ accordion.data.title }}</span>
+                </summary>
+                <div class="accordion__content rich-text">
+                    {{ accordion.content | safe }}
+                </div>
+            </details>
+        {% endfor %}
+    </div>
+    <div class="footer__credits">
+        {{ collections.footer[0].content | safe }}
+    </div>
+</footer>

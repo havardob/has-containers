@@ -1,0 +1,51 @@
+html {
+    --ff-primary: "Satoshi", "Instrument Sans", sans-serif;
+    --pallette-ice-cream: #f7f7f8;
+    --pallette-mist: #cfd6e4;
+    --pallette-void: #000819;
+    --pallette-midnight: #1d3744; 
+
+    --color-text-primary: var(--pallette-void);
+    --color-text-secondary: var(--pallette-midnight);
+    --color-border-primary: var(--pallette-void);
+    --color-bg-primary: var(--pallette-ice-cream);
+    --color-bg-secondary: var(--pallette-mist);
+
+    &[data-theme="dark"] {
+        --color-text-primary: var(--pallette-ice-cream);
+        --color-text-secondary: var(--pallette-mist);
+        --color-border-primary: var(--pallette-ice-cream);
+        --color-bg-primary: var(--pallette-void);
+        --color-bg-secondary: var(--pallette-midnight);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --color-text-primary: var(--pallette-ice-cream);
+        --color-text-secondary: var(--pallette-mist);
+        --color-border-primary: var(--pallette-ice-cream);
+        --color-bg-primary: var(--pallette-void);
+        --color-bg-secondary: var(--pallette-midnight);
+    }
+}
+
+body {
+    overflow: hidden;
+    container-type: inline-size;
+    container-name: root;
+    background-color: var(--color-bg-primary);
+    font-family: var(--ff-primary);
+    color: var(--color-text-primary);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: currentColor;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-primary);
+}

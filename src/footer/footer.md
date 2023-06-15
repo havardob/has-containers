@@ -1,0 +1,1 @@
+Code on [Github](https://github.com/havardob/has-containers). Made by [Håvard Brynjulfsen](https://havardbrynjulfsen.design). Disclaimer: the `:has` selector in the title has nothing to do with container queries, it's just a pun. But do use that too, it's awesome!

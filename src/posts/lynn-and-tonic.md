@@ -1,5 +1,4 @@
 ---
-tags: post
 title: Lynn & Tonic
 link: https://lynnandtonic.com
 description: Take a look at the grid of projects. It uses container queries in a neat way.

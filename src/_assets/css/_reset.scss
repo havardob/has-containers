@@ -41,7 +41,7 @@ a:not([class]) {
 }
 
 img,
-picture {
+picture, iframe { 
     max-width: 100%;
     display: block;
 }
@@ -49,6 +49,7 @@ picture {
 button,
 summary {
     cursor: pointer;
+    color: inherit;
 }
 
 body {
