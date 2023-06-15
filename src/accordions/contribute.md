@@ -2,7 +2,7 @@
 title: Contribute
 ---
 
-I need help. If you spot a website out in the wild that use container queries, add it to the list. You can send me an email at [havardob@hotmail.com](mailto:havardob@hotmail.com) or submit a PR on [Github](https://github.com/havardob/has-containers/tree/main/src/posts). It's super easy, just:
+I need help. If you spot a website out in the wild that has container queries, add it to the list. You can send me an email at [havardob@hotmail.com](mailto:havardob@hotmail.com) or submit a PR on [Github](https://github.com/havardob/has-containers/tree/main/src/posts). It's super easy, just:
 
 1. fork the repo
 2. add a screenshot of the website to the `_static` folder. Please give it a short and easy-to-read filename
